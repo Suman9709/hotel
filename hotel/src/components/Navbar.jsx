@@ -68,11 +68,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden w-full transition-all duration-500 overflow-hidden ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden w-full transition-all duration-500 overflow-hidden ${open ? "max-h-96 opacity-100 bg-[#e7dfd8]" : "max-h-0 opacity-0 "
           } `}
       >
         <ul
-          className={`flex flex-col gap-6 text-center py-6 text-md font-medium  font-sans ${scrolled ? "text-gray-800" : "text-white"
+          className={`flex flex-col gap-6 text-center py-6 text-md font-medium  font-sans ${scrolled ? "text-gray-800" : "text-garay-700"
             }`}
         >
           <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
