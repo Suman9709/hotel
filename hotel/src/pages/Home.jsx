@@ -1,37 +1,71 @@
-import React from 'react';
+
+import React, { useEffect, useState } from 'react'
+import img1 from '/img1.avif'
+import img2 from '/img2.avif'
+import img3 from '/img3.avif'
+import img4 from '/img4.avif'
+import arial1 from '/arial1.JPG'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+
+  const navigate = useNavigate();
+  const handleExploreRooms = () => {
+    navigate("/rooms");
+  }
+
+  const img = [arial1,img1,img2, img3, img4]
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex =>
+        prevIndex === img.length - 1 ? 0 : prevIndex + 1
+      )
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <div className="relative w-full h-screen overflow-hidden">
-      {/* Background Video */}
-      <video
-        className="absolute top-0 left-0 w-auto min-w-full min-h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
+    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden">
+
+      <div
+        className="flex h-full transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        <source
-          src="https://assets-cug1-825v2.tajhotels.com/video/wshbtaj.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Gradient overlay for contrast */}
-      {/* <div className="absolute inset-0  from-black/40 via-black/20 to-transparent"></div> */}
-
-      {/* Centered Text Content */}
-      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-6 text-white">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg animate-fadeIn">
-          Welcome to 3AcreIn
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl max-w-xl drop-shadow-md animate-fadeIn delay-200">
-          Experience Royal Luxury & Comfort — where elegance meets tranquility.
-        </p>
+        {img.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            className="min-w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-full object-cover"
+          />
+        ))}
       </div>
-    </div>
-  );
-};
 
-export default Home;
+      {/* Text Content */}
+      <div className='absolute bottom-10 left-6 sm:left-10 text-white max-w-lg'>
+        <h1 className='text-white text-3xl sm:text-4xl md:text-5xl font-semibold mb-4'
+          style={{ textShadow: "2px 2px 10px rgba(0,0,0,1)" }}>
+          Experience Timeless <br /> Luxury & Comfort
+        </h1>
+
+        <p className='text-white text-md'
+          style={{ textShadow: "2px 2px 10px rgba(0,0,0,1)" }}>
+          Discover the perfect balance of luxury and comfort with our modern
+          hotel and resort. Design for traveller seeking an unforgettable stay.
+        </p>
+
+        <button
+          onClick={handleExploreRooms}
+          className='bg-white rounded-xl text-black px-4 py-2 font-semibold my-2 font-sans hover:bg-gray-200 hover:text-[#fc8b0a] transition-all duration-300 cursor-pointer'>
+          Explore Our Rooms
+        </button>
+      </div>
+
+    </div>
+  )
+
+}
+
+export default Home

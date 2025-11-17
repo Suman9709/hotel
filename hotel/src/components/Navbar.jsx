@@ -1,56 +1,92 @@
-import React, { useEffect, useState } from "react";
-import logo from "/public/logo.png";
+import React, { use, useEffect, useState } from "react";
+import logo from "/logo.png";
+// import logo from '/logo1.jpg'
+import { HiMenu, HiX } from "react-icons/hi";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 40);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500  ${
-        scrolled ? "bg-white shadow-md" : "bg-[#001526]"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 overflow-x-hidden transition-all duration-500 ${scrolled ? "bg-[#e7dfd8] shadow-md" : "bg-transparent"
+
+        }`}
     >
-      <div className="max-w-7xl flex justify-between items-center px-8 h-18">
-        {/* logo */}
-        <div className="w-24 h-24">
-          <img src={logo} alt="Logo" className="w-full h-full object-contain rounded-lg" />
+      <div className="w-full flex justify-between items-center px-4 md:px-10 h-20 mx-auto overflow-x-hidden">
+
+        {/* Logo */}
+        <div className="w-20 h-20 shrink-0">
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-full h-full object-contain rounded-lg"
+          />
         </div>
 
-        {/* nav items */}
+        {/* Desktop Menu */}
         <ul
-          className={`flex gap-10 text-lg font-medium transition-colors duration-500 ${
-            scrolled ? "text-gray-800" : "text-white"
-          }`}
+          className={`hidden md:flex gap-8 text-md font-medium font-sans transition-colors duration-500 ${scrolled ? "text-gray-800" : "text-white"
+            }`}
         >
-          <li className="cursor-pointer hover:text-[#fc8b0a] transition-colors">Home</li>
-          <li className="cursor-pointer hover:text-[#fc8b0a] transition-colors">Rooms</li>
-          <li className="cursor-pointer hover:text-[#fc8b0a] transition-colors">Facilities</li>
-          <li className="cursor-pointer hover:text-[#fc8b0a] transition-colors">Contact</li>
+          <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
+          <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">ROOMS</li></Link>
+          <Link to={"/facilities"}><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link>
+          <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">EVENTS</li></Link>
+          <Link to={"/contact"}> <li className="cursor-pointer hover:text-[#fc8b0a]">CONTACT</li></Link>
         </ul>
 
-        {/* button */}
+        {/* Desktop Button */}
         <button
-          className={`px-6 py-2 rounded-full font-semibold transition-all duration-500 text-[#fc8b0a]  ${
-            scrolled
-              ? "bg-[#001526] text-white hover:bg-[#001526]"
-              : "bg-white text-[#001526] hover:bg-gray-100"
-          }`}
+          className={`hidden md:block px-6 py-2 rounded-full font-semibold transition-all duration-500 cursor-pointer hover:text-[#fc8b0a] ${scrolled ? "bg-[#001526] text-white" : "bg-white text-[#001526]"
+            }`}
         >
           Book Now
         </button>
+
+        {/* Hamburger icon for mobile */}
+        <div
+          className={`md:hidden text-3xl cursor-pointer ${scrolled ? "text-black" : "text-white"
+            }`}
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <HiX /> : <HiMenu />}
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden w-full transition-all duration-500 overflow-hidden ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          } `}
+      >
+        <ul
+          className={`flex flex-col gap-6 text-center py-6 text-md font-medium  font-sans ${scrolled ? "text-gray-800" : "text-white"
+            }`}
+        >
+          <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
+          <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">ROOMS</li></Link>
+          <Link to={"/facilities"}><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link>
+          <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">EVENTS</li></Link>
+          <Link to={"/contact"}> <li className="cursor-pointer hover:text-[#fc8b0a]">CONTACT</li></Link>
+          <button
+            className={`px-6 py-2 rounded-full font-semibold mx-auto mt-2 w-40 cursor-pointer ${scrolled ? "bg-[#001526] text-white" : "bg-white text-[#001526]"
+              }`}
+          >
+            Book Now
+          </button>
+        </ul>
       </div>
     </nav>
   );

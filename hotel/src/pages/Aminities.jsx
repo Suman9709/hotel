@@ -1,0 +1,34 @@
+import React from 'react'
+import AmenitiesCard from '../components/AmenitiesCard'
+import dinner from '/dinner.JPG'
+import laun from '/laun.JPG'
+import yoga from '/yoga.JPG'
+import playing from '/playing.JPG'
+
+const Aminities = () => {
+    return (
+        <div className='bg-[#edeae4] w-full px-6 sm:px-10 lg:px-16 py-12'>
+            <div className='flex gap-2 items-center'>
+                <div className='w-10 bg-gray-800 h-1 rounded-xl'></div>
+                <h3 className='text-gray-600 font-semibold text-lg  sm:text-xl'>Amenities</h3>
+            </div>
+            <div className='flex justify-between'>
+                <h1 className='text-3xl sm:text-4xl lg:text-5xl font-semibold mt-2 text-gray-600' style={{ fontFamily: "Times New Roman, serif" }}>
+                    Amenities Beyond <br /> Expectations
+                </h1>
+                <div className='lg:w-1/3 text-base sm:text-lg mt-12 text-gray-700 font-semibold'>
+                    <p>Every detail is designed to provide you with the finest luxury and comfort throughout your stay.</p>
+                </div>
+            </div>
+
+            <div className='mt-8 cursor-pointer flex flex-col gap-2 sm:gap-4 lg:gap-6'>
+                <AmenitiesCard amenitiesImg={dinner} amenitiesTitle="Fine Dining Experience" amenitiesText="lorem kjnknk kxzcbiuubm kjbihhbs dbif cdjbibs" />
+                <AmenitiesCard amenitiesImg={playing} amenitiesTitle="Outdoor Activities" amenitiesText="lorem kjnknk kxzcbiuubm kjbihhbs dbif cdjbibs" />
+                <AmenitiesCard amenitiesImg={yoga} amenitiesTitle="Yoga" amenitiesText="lorem kjnknk kxzcbiuubm kjbihhbs dbif cdjbibs" />
+                <AmenitiesCard amenitiesImg={laun} amenitiesTitle="Outdoor Space" amenitiesText="lorem kjnknk kxzcbiuubm kjbihhbs dbif cdjbibs" />
+            </div>
+        </div>
+    )
+}
+
+export default Aminities
