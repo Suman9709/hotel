@@ -53,7 +53,7 @@ const roomData = {
             "/DoveRoom/DOVE1.JPG",
             "/DoveRoom/DOVE2.JPG",
             "/DoveRoom/DOVE3.JPG",
-            "/DoveRoom/DOVE4.JPG",
+            
         ]
     }
 }
