@@ -20,10 +20,10 @@ const roomData = {
     emu: {
         name: "Emu",
         images: [
-            "/EmuRoom/EMU.JPG",
-            "/EmuRoom/EMU2.JPG",
-            "/EmuRoom/EMU3.JPG",
-            "/EmuRoom/EMU4.JPG",
+            "/EMU.JPG",
+            "/EMU2.JPG",
+            "/EMU3.JPG",
+            "/EMU4.JPG",
         ]
     },
     skylark: {
