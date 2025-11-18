@@ -9,7 +9,7 @@ const RoomsPage = () => {
         {
             keyName: "flamingo",
             roomType: "Flamingo Room",
-            img: "/flaming/FLAMINGO.JPG",
+            img: "/FLAMINGO.JPG",
             space: "143 sq.ft(13 sq.mt)",
             bed: "1 King Bed",
             li1: "Iron/Ironing Board",
@@ -27,7 +27,7 @@ const RoomsPage = () => {
         {
             keyName: "quail",
             roomType: "Quail",
-            img: "/QuailRoom/quail1.JPG",
+            img: "/quail1.JPG",
             space: "148 sq.ft (14 sq.mt)",
             bed: "1 King Bed",
             li1: "Heater - Additional charges",
@@ -45,7 +45,7 @@ const RoomsPage = () => {
         {
             keyName: "emu",
             roomType: "Emu",
-            img: "/EmuRoom/EMU.JPG",
+            img: "/EMU.JPG",
             space: "168 sq.ft (16 sq.mt)",
             bed: "1 King Bed",
             li1: "Bathroom",
@@ -63,7 +63,7 @@ const RoomsPage = () => {
         {
             keyName: "skylark",
             roomType: "Skylark (Twin Room)",
-            img: "/SkylarkRoom/skylark1.JPG",
+            img: "/skylark1.JPG",
             space: "180 sq.ft (17 sq.mt)",
             GardenView: "Garden View",
             bed: "1 King Bed",
@@ -82,7 +82,7 @@ const RoomsPage = () => {
         {
             keyName: "monal",
             roomType: "Monal (Twin Room)",
-            img: "/MonalRoom/monal1.JPG",
+            img: "/monal1.JPG",
             space: "120 sq.ft (11 sq.mt)",
             GardenView: "Garden View",
             bed: "1 King Bed(s)",
@@ -101,7 +101,7 @@ const RoomsPage = () => {
         {
             keyName: "dove",
             roomType: "Dove",
-            img: "/DoveRoom/DOVE.JPG",
+            img: "/dove.jpg",
             space: "384 sq.ft (36 sq.mt)",
             GardenView: "Garden View",
             bed: "1 King Bed(s)",
