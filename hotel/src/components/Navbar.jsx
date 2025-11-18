@@ -2,11 +2,14 @@ import React, { use, useEffect, useState } from "react";
 import logo from "/logo.png";
 // import logo from '/logo1.jpg'
 import { HiMenu, HiX } from "react-icons/hi";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,18 +20,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
+  const navbarbg = !isHome ? true : scrolled;
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 overflow-x-hidden transition-all duration-500 ${scrolled ? "bg-[#e7dfd8] shadow-md" : "bg-transparent"
-
-        }`}
+      className={`fixed top-0 left-0 w-full z-50 overflow-x-hidden transition-all duration-500  ${scrolled ? "bg-[#e7dfd8] shadow-md" : "bg-transparent "} `}
     >
       <div className="w-full flex justify-between items-center px-4 md:px-10 h-20 mx-auto overflow-x-hidden">
 
         {/* Logo */}
-        <div className="w-20 h-20 shrink-0">
+        <div className="w-14 h-14 sm:w-20 sm:h-20 shrink-0 ">
           <img
             src={logo}
             alt="Logo"
@@ -38,14 +39,23 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul
-          className={`hidden md:flex gap-8 text-md font-medium font-sans transition-colors duration-500 ${scrolled ? "text-gray-800" : "text-white"
-            }`}
+          className={`hidden md:flex gap-8 text-md font-medium 
+            ${navbarbg ? "text-gray-700" : "text-white"} ${scrolled ? "text-gray-800" : "text-white"}`}
         >
+
           <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
           <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">ROOMS</li></Link>
-          <Link to={"/facilities"}><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link>
+          <Link to={"/facilities"} id="facilities"><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link>
           <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">EVENTS</li></Link>
-          <Link to={"/contact"}> <li className="cursor-pointer hover:text-[#fc8b0a]">CONTACT</li></Link>
+          <li
+            className="cursor-pointer hover:text-[#fc8b0a]"
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            CONTACT
+          </li>
+
         </ul>
 
         {/* Desktop Button */}
@@ -68,18 +78,25 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden w-full transition-all duration-500 overflow-hidden ${open ? "max-h-96 opacity-100 bg-[#e7dfd8]" : "max-h-0 opacity-0 "
+        className={`md:hidden w-full transition-all duration-500 overflow-hidden  ${open ? "max-h-96 opacity-100 bg-[#e7dfd8]" : "max-h-0 opacity-0 "
           } `}
       >
         <ul
-          className={`flex flex-col gap-6 text-center py-6 text-md font-medium  font-sans ${scrolled ? "text-gray-800" : "text-garay-700"
+          className={`flex flex-col gap-6 text-center py-6 text-md font-medium  font-sans ${scrolled ? "text-gray-800" : "text-gray-700"
             }`}
         >
           <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
           <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">ROOMS</li></Link>
           <Link to={"/facilities"}><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link>
           <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">EVENTS</li></Link>
-          <Link to={"/contact"}> <li className="cursor-pointer hover:text-[#fc8b0a]">CONTACT</li></Link>
+            <li
+            className="cursor-pointer hover:text-[#fc8b0a]"
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            CONTACT
+          </li>
           <button
             className={`px-6 py-2 rounded-full font-semibold mx-auto mt-2 w-40 cursor-pointer ${scrolled ? "bg-[#001526] text-white" : "bg-white text-[#001526]"
               }`}

@@ -25,7 +25,7 @@ const HomePage = () => {
                 <Aminities />
             </section>
             <section id='interior'>
-                <Interior/>
+                <Interior />
             </section>
         </div>
     )

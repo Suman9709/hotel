@@ -7,12 +7,12 @@ import playing from '/playing.JPG'
 
 const Aminities = () => {
     return (
-        <div className='bg-[#edeae4] w-full px-6 sm:px-10 lg:px-16 py-12'>
+        <div className='bg-[#edeae4] w-full px-6 sm:px-10 lg:px-16 py-12 flex flex-col'>
             <div className='flex gap-2 items-center'>
                 <div className='w-10 bg-gray-800 h-1 rounded-xl'></div>
                 <h3 className='text-gray-600 font-semibold text-lg  sm:text-xl'>Amenities</h3>
             </div>
-            <div className='flex justify-between'>
+            <div className='flex justify-between flex-col lg:flex-row items-start lg:items-center '>
                 <h1 className='text-3xl sm:text-4xl lg:text-5xl font-semibold mt-2 text-gray-600' style={{ fontFamily: "Times New Roman, serif" }}>
                     Amenities Beyond <br /> Expectations
                 </h1>

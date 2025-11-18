@@ -45,12 +45,12 @@ const Home = () => {
 
       {/* Text Content */}
       <div className='absolute bottom-10 left-6 sm:left-10 text-white max-w-lg'>
-        <h1 className='text-white text-3xl sm:text-4xl md:text-5xl font-semibold mb-4'
+        <h1 className='text-white text-2xl sm:text-4xl md:text-5xl font-semibold mb-4'
           style={{ textShadow: "2px 2px 10px rgba(0,0,0,1)" }}>
           Experience Timeless <br /> Luxury & Comfort
         </h1>
 
-        <p className='text-white text-md'
+        <p className='text-white text-sm sm:text-lg md:text-xl mb-6 font-medium'
           style={{ textShadow: "2px 2px 10px rgba(0,0,0,1)" }}>
           Discover the perfect balance of luxury and comfort with our modern
           hotel and resort. Design for traveller seeking an unforgettable stay.

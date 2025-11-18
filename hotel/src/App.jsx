@@ -4,6 +4,9 @@ import Layout from './pages/Layout'
 import HomePage from './pages/HomePage'
 import Rooms from './pages/Rooms'
 import Events from './pages/Events'
+import RoomsPage from './pages/RoomsPage'
+import RoomsImages from './pages/RoomsImages'
+import Facilities from './pages/Facilities'
 
 const appRouter = createBrowserRouter([
   {
@@ -16,11 +19,19 @@ const appRouter = createBrowserRouter([
       },
       {
         path: '/rooms',
-        // element: <Rooms />
+        element: <RoomsPage />
+      },
+       {
+        path: '/rooms/details/:roomKey',
+        element: <RoomsImages />
       },
       {
         path: '/events',
         element: <Events />
+      },
+       {
+        path: '/facilities',
+        element: <Facilities />
       },
     ]
     // children: [
@@ -37,49 +48,3 @@ const App = () => {
 
 export default App
 
-// import React from "react";
-// import Navbar from "./components/Navbar";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Footer from "./components/Footer";
-// import Events from "./pages/Events";
-
-
-// const appRouter = createBrowserRouter([
-//   {
-
-//   }
-// ])
-
-// const App = () => {
-//   return (
-//     <div className="flex flex-col min-h-screen  ">
-//       {/* Fixed Navbar */}
-//       <Navbar />
-
-//       {/* Sections */}
-//       <main className="">
-//         <section id="home">
-//           <Home />
-//         </section>
-
-//         <section id="about">
-//           <About />
-//         </section>
-//         <section>
-//           <Events />
-//         </section>
-
-//         {/* Add more sections if needed */}
-//         {/* <section id="rooms">...</section> */}
-//       </main>
-
-
-
-//       {/* Footer */}
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default App;
