@@ -32,7 +32,6 @@ const roomData = {
             "/SkylarkRoom/skylark1.JPG",
             "/SkylarkRoom/skylark2.JPG",
             "/SkylarkRoom/skylark3.JPG",
-            "/SkylarkRoom/skylark4.JPG",
             "/SkylarkRoom/skylark5.JPG",
         ]
     },
