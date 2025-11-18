@@ -54,7 +54,6 @@ const roomData = {
             "/DoveRoom/DOVE2.JPG",
             "/DoveRoom/DOVE3.JPG",
             "/DoveRoom/DOVE4.JPG",
-            "/DoveRoom/DOVE24.JPG",
         ]
     }
 }
