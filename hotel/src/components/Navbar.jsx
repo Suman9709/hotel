@@ -28,7 +28,6 @@ const Navbar = () => {
     >
       <div className="w-full flex justify-between items-center px-4 md:px-10 h-20 mx-auto overflow-x-hidden">
 
-        {/* Logo */}
         <div className="w-14 h-14 sm:w-20 sm:h-20 shrink-0 ">
           <img
             src={logo}
@@ -58,7 +57,6 @@ const Navbar = () => {
 
         </ul>
 
-        {/* Desktop Button */}
         <button
           className={`hidden md:block px-6 py-2 rounded-full font-semibold transition-all duration-500 cursor-pointer hover:text-[#fc8b0a] ${scrolled ? "bg-[#001526] text-white" : "bg-white text-[#001526]"
             }`}
