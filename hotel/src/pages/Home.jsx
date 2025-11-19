@@ -14,13 +14,21 @@ const Home = () => {
     navigate("/rooms");
   }
 
-  const img = [arial1,img1,img2, img3, img4]
+  const image = [
+    "https://res.cloudinary.com/dwvf9a857/image/upload/v1763534855/arial1_cvkr9e.jpg",
+    "https://res.cloudinary.com/dwvf9a857/image/upload/v1763534857/img1_dznuzr.avif",
+    "https://res.cloudinary.com/dwvf9a857/image/upload/v1763534858/img2_tr9kjd.avif",
+    "https://res.cloudinary.com/dwvf9a857/image/upload/v1763534859/img3_g3dv7d.avif",
+    "https://res.cloudinary.com/dwvf9a857/image/upload/v1763534860/img4_mkpdxs.avif"
+  ]
+
+  const img = [arial1, img1, img2, img3, img4]
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex =>
-        prevIndex === img.length - 1 ? 0 : prevIndex + 1
+        prevIndex === image.length - 1 ? 0 : prevIndex + 1
       )
     }, 3000)
 
@@ -34,7 +42,7 @@ const Home = () => {
         className="flex h-full transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {img.map((src, index) => (
+        {image.map((src, index) => (
           <img
             key={index}
             src={src}
