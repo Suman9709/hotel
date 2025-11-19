@@ -2,7 +2,7 @@ import React, { use, useEffect, useState } from "react";
 import logo from "/logo.png";
 // import logo from '/logo1.jpg'
 import { HiMenu, HiX } from "react-icons/hi";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -44,7 +44,7 @@ const Navbar = () => {
 
           <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
           <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">ROOMS</li></Link>
-          <Link to={"/facilities"} id="facilities"><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link>
+          {/* <Link to={"/facilities"} id="facilities"><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link> */}
           <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">EVENTS</li></Link>
           <li
             className="cursor-pointer hover:text-[#fc8b0a]"
@@ -85,7 +85,7 @@ const Navbar = () => {
         >
           <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
           <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">ROOMS</li></Link>
-          <Link to={"/facilities"}><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link>
+          {/* <Link to={"/facilities"}><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link> */}
           <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">EVENTS</li></Link>
             <li
             className="cursor-pointer hover:text-[#fc8b0a]"
