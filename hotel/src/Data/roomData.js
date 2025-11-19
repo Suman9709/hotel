@@ -2,19 +2,19 @@ const roomData = {
     flamingo: {
         name: "Flamingo",
         images: [
-            "/flaming/FLAMINGO.JPG",
-            "/flaming/FLAMINGO1.JPG",
-            "/flaming/FLAMINGO2.JPG",
+            "/FLAMINGO.JPG",
+            "/FLAMINGO1.JPG",
+            "/FLAMINGO2.JPG",
         ]
     },
     quail: {
         name: "Quail",
         images: [
-            "/QuailRoom/quail1.JPG",
-            "/QuailRoom/quail2.JPG",
-            "/QuailRoom/quail3.JPG",
-            "/QuailRoom/quail4.JPG",
-            "/QuailRoom/quail5.JPG",
+            "/quail1.JPG",
+            "/quail2.JPG",
+            "/quail3.JPG",
+            "/quail4.JPG",
+            "/quail5.JPG",
         ]
     },
     emu: {
@@ -29,29 +29,29 @@ const roomData = {
     skylark: {
         name: "Skylark",
         images: [
-            "/SkylarkRoom/skylark1.JPG",
-            "/SkylarkRoom/skylark2.JPG",
-            "/SkylarkRoom/skylark3.JPG",
-            "/SkylarkRoom/skylark5.JPG",
+            "/skylark1.JPG",
+            "/skylark2.JPG",
+            "/skylark3.JPG",
+            "/skylark5.JPG",
         ]
     },
     monal: {
         name: "Monal",
         images: [
-            "/MonalRoom/monal1.JPG",
-            "/MonalRoom/monal2.JPG",
-            "/MonalRoom/monal3.JPG",
-            "/MonalRoom/monal4.JPG",
-            "/MonalRoom/monal5.JPG",
+            "/monal1.JPG",
+            "/monal2.JPG",
+            "/monal3.JPG",
+            "/monal4.JPG",
+            "/monal5.JPG",
         ]
     },
     dove: {
         name: "Dove",
         images: [
-            "/DoveRoom/DOVE.JPG",
-            "/DoveRoom/DOVE1.JPG",
-            "/DoveRoom/DOVE2.JPG",
-            "/DoveRoom/DOVE3.JPG",
+            "/DOVE.JPG",
+            "/DOVE1.JPG",
+            "/DOVE2.JPG",
+            "/DOVE3.JPG",
             
         ]
     }
