@@ -7,6 +7,7 @@ import Events from './pages/Events'
 import RoomsPage from './pages/RoomsPage'
 import RoomsImages from './pages/RoomsImages'
 import Facilities from './pages/Facilities'
+import AnimitiesDetails from './pages/AnimitiesDetails'
 
 const appRouter = createBrowserRouter([
   {
@@ -30,8 +31,8 @@ const appRouter = createBrowserRouter([
         element: <Events />
       },
        {
-        path: '/facilities',
-        element: <Facilities />
+        path: '/animitiesDetails/:slug',
+        element: <AnimitiesDetails />
       },
     ]
     // children: [

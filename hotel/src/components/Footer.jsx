@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -53,11 +54,11 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-gray-700 mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li className="hover:text-[#fc8b0a] cursor-pointer transition">Home</li>
-            <li className="hover:text-[#fc8b0a] cursor-pointer transition">Rooms</li>
-            <li className="hover:text-[#fc8b0a] cursor-pointer transition">Facilities</li>
-            <li className="hover:text-[#fc8b0a] cursor-pointer transition">Gallery</li>
-            <li className="hover:text-[#fc8b0a] cursor-pointer transition">Contact</li>
+            <a href="#"> <li className="cursor-pointer hover:text-[#fc8b0a]">Home</li></a>
+            <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">Rooms</li></Link>
+            {/* <Link to={"/facilities"}><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link> */}
+            <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">Events</li></Link>
+
           </ul>
         </div>
 
@@ -84,9 +85,9 @@ const Footer = () => {
 
           <div className="flex gap-4 mt-4 text-lg">
             <a href="#" className="hover:text-[#fc8b0a] transition"><FaFacebookF /></a>
-            <a href="#" className="hover:text-[#fc8b0a] transition"><FaInstagram /></a>
+            <a href="https://www.instagram.com/3acre.s?igsh=YTczOGcyemR3eDR1" target="_blank" className="hover:text-[#fc8b0a] transition"><FaInstagram /></a>
             <a href="#" className="hover:text-[#fc8b0a] transition"><FaTwitter /></a>
-            <a href="#" className="hover:text-[#fc8b0a] transition"><FaLinkedinIn /></a>
+            {/* <a href="#" className="hover:text-[#fc8b0a] transition"><FaLinkedinIn /></a> */}
           </div>
         </div>
 

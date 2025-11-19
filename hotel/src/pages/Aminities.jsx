@@ -4,8 +4,15 @@ import dinner from '/dinner.JPG'
 import laun from '/laun.JPG'
 import yoga from '/yoga.JPG'
 import playing from '/playing.JPG'
+import { useNavigate } from 'react-router-dom'
 
 const Aminities = () => {
+
+    const navigate = useNavigate();
+    const hanldeClick = (slug) => {
+        navigate(`/animitiesDetails/${slug}`);
+    }
+
     return (
         <div className='bg-[#edeae4] w-full px-6 sm:px-10 lg:px-16 py-12 flex flex-col'>
             <div className='flex gap-2 items-center'>
@@ -22,10 +29,10 @@ const Aminities = () => {
             </div>
 
             <div className='mt-8 cursor-pointer flex flex-col gap-2 sm:gap-4 lg:gap-6'>
-                <AmenitiesCard amenitiesImg={dinner} amenitiesTitle="Fine Dining Experience" amenitiesText="lorem kjnknk kxzcbiuubm kjbihhbs dbif cdjbibs" />
-                <AmenitiesCard amenitiesImg={playing} amenitiesTitle="Outdoor Activities" amenitiesText="lorem kjnknk kxzcbiuubm kjbihhbs dbif cdjbibs" />
-                <AmenitiesCard amenitiesImg={yoga} amenitiesTitle="Yoga" amenitiesText="lorem kjnknk kxzcbiuubm kjbihhbs dbif cdjbibs" />
-                <AmenitiesCard amenitiesImg={laun} amenitiesTitle="Outdoor Space" amenitiesText="lorem kjnknk kxzcbiuubm kjbihhbs dbif cdjbibs" />
+                <AmenitiesCard amenitiesImg={dinner} amenitiesTitle="Fine Dining Experience" amenitiesText="Indulge in gourmet cuisine prepared, paired with exquisite wines." handleClick={()=>hanldeClick("fine-dining")} />
+                <AmenitiesCard amenitiesImg={playing} amenitiesTitle="Outdoor Activities" amenitiesText="Experience outdoor activities that bring you closer to nature while offering fun and excitement." handleClick={()=>hanldeClick("outdoor-activities")} />
+                <AmenitiesCard amenitiesImg={yoga} amenitiesTitle="Yoga" amenitiesText="Find balance and relaxation with guided yoga sessions designed for all experience levels." handleClick={()=>hanldeClick("yoga")} />
+                <AmenitiesCard amenitiesImg={laun} amenitiesTitle="Outdoor Space" amenitiesText="Unwind in our spacious outdoor area, designed for leisure, comfort, and memorable moments." handleClick={()=>hanldeClick("outdoor-space")} />
             </div>
         </div>
     )

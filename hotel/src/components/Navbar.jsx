@@ -9,7 +9,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const location = useLocation();
-  const isHome = location.pathname === "/";
+  // const isHome = location.pathname === "/";
+
+  const transparentPage = ["/", "/rooms",];
+  const isTransparentPage = transparentPage.includes(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,12 +23,20 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navbarbg = !isHome ? true : scrolled;
+  // const navbarbg = !isHome ? true : scrolled;
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 overflow-x-hidden transition-all duration-500  ${scrolled ? "bg-[#e7dfd8] shadow-md" : "bg-transparent "} `}
+      className={`fixed top-0 left-0 w-full z-50 overflow-x-hidden transition-all duration-500
+    ${isTransparentPage
+          ? scrolled
+            ? "bg-[#e7dfd8] shadow-md"
+            : "bg-transparent"
+          : "bg-[#e7dfd8] shadow-md"
+        }
+  `}
     >
+
       <div className="w-full flex justify-between items-center px-4 md:px-10 h-20 mx-auto overflow-x-hidden">
 
         <div className="w-14 h-14 sm:w-20 sm:h-20 shrink-0 ">
@@ -39,7 +50,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul
           className={`hidden md:flex gap-8 text-md font-medium 
-            ${navbarbg ? "text-gray-700" : "text-white"} ${scrolled ? "text-gray-800" : "text-white"}`}
+            ${isTransparentPage ? (scrolled ? "text-gray-700" : "text-white") : "text-gray-700"}`}
         >
 
           <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
@@ -87,7 +98,7 @@ const Navbar = () => {
           <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">ROOMS</li></Link>
           {/* <Link to={"/facilities"}><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link> */}
           <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">EVENTS</li></Link>
-            <li
+          <li
             className="cursor-pointer hover:text-[#fc8b0a]"
             onClick={() => {
               document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
