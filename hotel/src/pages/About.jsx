@@ -59,7 +59,7 @@ const About = () => {
       {/* Right Image Section */}
       <div className="md:w-1/2 h-[400px] mt-12 animate-fadeIn delay-200">
         <img
-          src={aboutImage}
+          src="https://res.cloudinary.com/dwvf9a857/image/upload/v1763534866/outside_ewtdir.avif"
           alt="About 3AcreIn"
           className="rounded-2xl shadow-2xl w-full max-w-lg h-full mx-auto hover:scale-105 transition-transform duration-500 object-cover"
         />
