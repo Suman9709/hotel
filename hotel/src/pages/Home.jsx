@@ -77,3 +77,52 @@ const Home = () => {
 }
 
 export default Home
+
+// import React, { useState, useRef } from "react";
+// import { useNavigate } from "react-router-dom";
+
+// const Home = () => {
+//   const navigate = useNavigate();
+//   const handleExploreRooms = () => navigate("/rooms");
+
+//   const [muted, setMuted] = useState(true);
+//   const videoRef = useRef(null);
+
+//   const toggleMute = () => {
+//     setMuted(!muted);
+//     if (videoRef.current) {
+//       videoRef.current.muted = !videoRef.current.muted;
+//     }
+//   };
+
+//   return (
+//     <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen overflow-hidden">
+//       <video
+//         ref={videoRef}
+//         autoPlay
+//         muted={muted}
+//         loop
+//         playsInline
+//         className="absolute top-0 left-0 w-full h-full object-cover"
+//       >
+//         <source
+//           src="https://drive.google.com/uc?export=download&id=1pnlA4U8se_EBktoaabVzceozl6X4QrW4"
+//           type="video/mp4"
+//         />
+//       </video>
+
+//       {/* Dark overlay */}
+//       <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+
+//       {/* Mute / Unmute Button */}
+//       <button
+//         onClick={toggleMute}
+//         className="absolute bottom-4 right-4 bg-white/70 text-black px-3 py-2 rounded-full shadow-md text-sm font-semibold hover:bg-white transition"
+//       >
+//         {muted ? "Unmute" : "Mute"}
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default Home;

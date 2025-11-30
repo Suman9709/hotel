@@ -5,6 +5,9 @@ import Events from './Events'
 import Rooms from './Rooms'
 import Aminities from './Aminities'
 import Interior from './Interior'
+import EnquireForm from './EnquireForm'
+import contactImg from '/contact.jpg'
+
 
 const HomePage = () => {
     return (
@@ -26,6 +29,24 @@ const HomePage = () => {
             </section>
             <section id='interior'>
                 <Interior />
+            </section>
+            <section
+                id='enquire'
+                className="relative min-h-screen"
+                style={{
+                    backgroundImage: `url(${contactImg})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundAttachment: 'fixed'
+                }}
+            >
+                {/* Overlay for better readability */}
+                <div className="absolute inset-0 "></div>
+
+                {/* Form Content */}
+                <div className="relative z-10">
+                    <EnquireForm />
+                </div>
             </section>
         </div>
     )

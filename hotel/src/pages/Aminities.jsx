@@ -1,7 +1,7 @@
 import React from 'react'
 import AmenitiesCard from '../components/AmenitiesCard'
 import dinner from '/dinner.JPG'
-import laun from '/laun.JPG'
+import wedding from '/wedding.jpeg'
 import yoga from '/yoga.JPG'
 import playing from '/playing.JPG'
 import { useNavigate } from 'react-router-dom'
@@ -31,8 +31,8 @@ const Aminities = () => {
             <div className='mt-8 cursor-pointer flex flex-col gap-2 sm:gap-4 lg:gap-6'>
                 <AmenitiesCard amenitiesImg={dinner} amenitiesTitle="Fine Dining Experience" amenitiesText="Indulge in gourmet cuisine prepared, paired with exquisite wines." handleClick={()=>hanldeClick("fine-dining")} />
                 <AmenitiesCard amenitiesImg={playing} amenitiesTitle="Outdoor Activities" amenitiesText="Experience outdoor activities that bring you closer to nature while offering fun and excitement." handleClick={()=>hanldeClick("outdoor-activities")} />
+                <AmenitiesCard amenitiesImg={wedding} amenitiesTitle="Wedding Events" amenitiesText="3Acres Resort is a charming destination for weddings, get-togethers, and corporate events." handleClick={()=>hanldeClick("wedding-events")} />
                 <AmenitiesCard amenitiesImg={yoga} amenitiesTitle="Yoga" amenitiesText="Find balance and relaxation with guided yoga sessions designed for all experience levels." handleClick={()=>hanldeClick("yoga")} />
-                <AmenitiesCard amenitiesImg={laun} amenitiesTitle="Outdoor Space" amenitiesText="Unwind in our spacious outdoor area, designed for leisure, comfort, and memorable moments." handleClick={()=>hanldeClick("outdoor-space")} />
             </div>
         </div>
     )

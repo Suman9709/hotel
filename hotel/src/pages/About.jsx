@@ -12,7 +12,7 @@ const About = () => {
         <div className='flex items-center gap-2 mb-4'>
           <div className='w-14 bg-[#fc8b0a] h-1  rounded-xl '></div>
           <h2 className="text-3xl md:text-3xl font-bold  text-gray-600">
-            About <span className="text-[#fc8b0a]">3Acres</span>
+            About <span className="text-[#fc8b0a]">3Acres Resort</span>
           </h2>
         </div>
         <div >
@@ -26,23 +26,30 @@ const About = () => {
           </h1>
 
         </div>
-        <p className="text-lg leading-relaxed text-gray-600">
+        {/* <p className="text-lg leading-relaxed text-gray-600">
           Welcome to <span className="text-[#fc8b0a] font-semibold">3Acres</span>, where luxury meets serenity.
           Our mission is to offer an unforgettable stay with modern amenities, royal hospitality,
           and personalized comfort. Nestled amidst nature, our property provides a perfect blend
           of elegance and peace for travelers seeking a refined experience.
+        </p> */}
+
+        <p className="text-lg leading-relaxed text-gray-600">
+          Welcome to  <span className="text-[#fc8b0a] font-semibold">3Acres Resort – A Hidden Gem in Dehradun</span> <br />
+          Tucked away in the serene landscapes of Upper Kandoli, Dehradun, 3Acres Resort is a peaceful jungle retreat where nature meets comfort. Whether you're here for a quiet getaway, a family vacation, or a special celebration, our resort offers the perfect blend of rustic charm and modern luxury. <br />
+          Reconnect with nature, relax in thoughtfully designed spaces, and create unforgettable memories at one of Dehradun's most loved offbeat destinations.
+
         </p>
         {/* <p className="text-lg leading-relaxed text-black">
           From contemporary rooms to exquisite dining and world-class facilities, every corner
           of 3AcreIn reflects sophistication and warmth. Whether you’re here for leisure or business,
           we ensure your stay is both memorable and delightful.
         </p> */}
-        <button
+        {/* <button
           className="mt-4 px-6 py-2 border border-black text-gray-600 font-semibold rounded-3xl shadow-lg 
              flex items-center gap-1 transition-all duration-300 cursor-pointer "
         >
           More About <IoIosArrowRoundForward size={32} />
-        </button>
+        </button> */}
 
         <div className='flex w-full gap-8 text-gray-600' style={{ fontFamily: "Times New Roman, serif" }}>
           <div className='space-y-2 flex flex-col items-center'>

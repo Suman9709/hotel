@@ -19,10 +19,10 @@ const RoomsPage = () => {
             li5: "Closet",
             li6: "Telephone",
             extra: "Private Bathroom",
-            price1: "5000",
-            price2: "7000",
-            price3: "9500",
-            price4: "12000"
+            // price1: "5000",
+            // price2: "7000",
+            // price3: "9500",
+            // price4: "12000"
         },
         {
             keyName: "quail",
@@ -37,10 +37,10 @@ const RoomsPage = () => {
             li5: "Room Service",
             li6: "Mineral Water",
             extra: "Private Bathroom",
-            price1: "5000",
-            price2: "7000",
-            price3: "9500",
-            price4: "12000"
+            // price1: "5000",
+            // price2: "7000",
+            // price3: "9500",
+            // price4: "12000"
         },
         {
             keyName: "emu",
@@ -55,10 +55,10 @@ const RoomsPage = () => {
             li5: "Kettle",
             li6: "TV",
             extra: "Private Bathroom",
-            price1: "5000",
-            price2: "7000",
-            price3: "9500",
-            price4: "12000"
+            // price1: "5000",
+            // price2: "7000",
+            // price3: "9500",
+            // price4: "12000"
         },
         {
             keyName: "skylark",
@@ -74,10 +74,10 @@ const RoomsPage = () => {
             li5: "Closet",
             li6: "Telephone",
             extra: "Private Bathroom",
-            price1: "10,000",
-            price2: "13,500",
-            price3: "17,100",
-            price4: "20,500"
+            // price1: "10,000",
+            // price2: "13,500",
+            // price3: "17,100",
+            // price4: "20,500"
         },
         {
             keyName: "monal",
@@ -93,10 +93,10 @@ const RoomsPage = () => {
             li5: "Closet",
             li6: "Telephone",
             extra: "Private Bathroom",
-            price1: "10,000",
-            price2: "13,500",
-            price3: "17,100",
-            price4: "20,500"
+            // price1: "10,000",
+            // price2: "13,500",
+            // price3: "17,100",
+            // price4: "20,500"
         },
         {
             keyName: "dove",
@@ -112,10 +112,10 @@ const RoomsPage = () => {
             li5: "Closet",
             li6: "Chair",
             extra: "Private Bathroom",
-            price1: "10,000",
-            price2: "13,500",
-            price3: "17,100",
-            price4: "20,500"
+            // price1: "10,000",
+            // price2: "13,500",
+            // price3: "17,100",
+            // price4: "20,500"
         }
 
     ]
