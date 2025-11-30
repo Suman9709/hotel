@@ -5,7 +5,7 @@ const Events = () => {
     { id: 1, title: "MEETINGS & CONFERENCES", image: "https://res.cloudinary.com/dwvf9a857/image/upload/v1764527387/WhatsApp_Image_2025-11-30_at_21.20.49_9015e437_oizy5e.jpg" },
     { id: 2, title: "GRAND ROYAL EVENTS", image: "https://res.cloudinary.com/dwvf9a857/image/upload/v1764527281/WhatsApp_Image_2025-11-12_at_11.15.46_AM_ipidg5.jpg" },
     { id: 3, title: "TIMELESS WEDDINGS", image: "https://res.cloudinary.com/dwvf9a857/image/upload/v1764527279/WhatsApp_Image_2025-11-13_at_11.08.40_PM_idgo2u.jpg" },
-    { id: 4, title: "CULTURAL NIGHTS", image: "https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1000&q=80" },
+    // { id: 4, title: "CULTURAL NIGHTS", image: "https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1000&q=80" },
     { id: 5, title: "FINE DINING EXPERIENCE", image: "https://res.cloudinary.com/dwvf9a857/image/upload/v1764527505/WhatsApp_Image_2025-12-01_at_00.00.03_a72e5969_n8osnc.jpg" },
   ];
 
