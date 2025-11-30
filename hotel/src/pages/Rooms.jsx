@@ -53,10 +53,10 @@ const Rooms = () => {
 
       {/* --- ROOM CARDS GRID --- */}
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12'>
-        <RoomCard roomType="Flamingo" price="5,000" img={flamingo} />
-        <RoomCard roomType="Kingfisher" price="5,000" img={kingfisher} />
-        <RoomCard roomType="Monal (Twin Room)" price="10,000" img={monal} />
-        <RoomCard roomType="Dove" price="10,000" img={dove} />
+        <RoomCard roomType="Flamingo" img={flamingo} />
+        <RoomCard roomType="Kingfisher"  img={kingfisher} />
+        <RoomCard roomType="Monal (Twin Room)"  img={monal} />
+        <RoomCard roomType="Dove"  img={dove} />
       </div>
 
     </div>

@@ -14,7 +14,7 @@ const RoomCard = ({ img, roomType, price }) => {
 
             <div className='absolute bottom-3 left-3 text-white'>
                 <p className="font-semibold text-lg sm:text-xl">{roomType}</p>
-                <p className="text-sm sm:text-md opacity-90">From ₹{price}/night</p>
+                {/* <p className="text-sm sm:text-md opacity-90">From ₹{price}/night</p> */}
             </div>
 
         </div>

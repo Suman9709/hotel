@@ -40,8 +40,7 @@ const HomePage = () => {
                     backgroundAttachment: 'fixed'
                 }}
             >
-                {/* Overlay for better readability */}
-                <div className="absolute inset-0 "></div>
+               
 
                 {/* Form Content */}
                 <div className="relative z-10">
