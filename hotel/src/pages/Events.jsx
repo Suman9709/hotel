@@ -10,7 +10,7 @@ const Events = () => {
   ];
 
   return (
-    <div className="bg-[#e7dfd8] px-6 py-10 mt-20">
+    <div className=" px-6 py-10 mt-20">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-serif font-semibold text-gray-700 mb-4">
           EVENTS AND CONFERENCES

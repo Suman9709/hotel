@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
+import { FaLocationDot, FaPhone, FaEnvelope, FaInstagram, FaWhatsapp, FaYoutube, FaFacebookF, FaTwitter } from "react-icons/fa6";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
@@ -66,29 +66,72 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-gray-700 mb-4">Contact Us</h3>
 
+
           <ul className="space-y-3 text-sm">
+
+            {/* Location */}
             <li className="flex items-center gap-2">
               <FaLocationDot className="text-gray-700" />
               Upper Kandoli, Dehradun Uttarakhand, India
             </li>
 
+            {/* Phone - Click to Call */}
             <li className="flex items-center gap-2">
               <FaPhone className="text-gray-700" />
-              +91 8923596448, +91 9090118484
+              <a href="tel:+918923596448" className="hover:text-blue-600">+91 8923596448</a>,
+              <a href="tel:+919090118484" className="hover:text-blue-600">+91 9090118484</a>
             </li>
 
+            {/* Email - Click to Mail */}
             <li className="flex items-center gap-2">
               <FaEnvelope className="text-gray-700" />
-              3acresresort@gmail.com
+              <a href="mailto:3acresresort@gmail.com" className="hover:text-blue-600">
+                3acresresort@gmail.com
+              </a>
+            </li>
+
+            {/* WhatsApp */}
+            <li className="flex items-center gap-2">
+              <FaWhatsapp className="text-green-600" />
+              <a
+                href="https://wa.me/918923596448"
+                target="_blank"
+                className="hover:text-green-700"
+              >
+                Chat on WhatsApp
+              </a>
+            </li>
+
+            {/* Instagram */}
+            <li className="flex items-center gap-2">
+              <FaInstagram className="text-pink-600" />
+              <a
+                href="https://www.instagram.com/3acresresort"
+                target="_blank"
+                className="hover:text-pink-700"
+              >
+                Visit Instagram
+              </a>
+            </li>
+
+            {/* YouTube */}
+            <li className="flex items-center gap-2">
+              <FaYoutube className="text-red-600" />
+              <a
+                href="https://www.youtube.com/@3acresresort"
+                target="_blank"
+                className="hover:text-red-700"
+              >
+                Watch on YouTube
+              </a>
             </li>
           </ul>
 
-          <div className="flex gap-4 mt-4 text-lg">
+          {/* <div className="flex gap-4 mt-4 text-lg">
             <a href="#" className="hover:text-[#fc8b0a] transition"><FaFacebookF /></a>
             <a href="https://www.instagram.com/3acre.s?igsh=YTczOGcyemR3eDR1" target="_blank" className="hover:text-[#fc8b0a] transition"><FaInstagram /></a>
             <a href="#" className="hover:text-[#fc8b0a] transition"><FaTwitter /></a>
-            {/* <a href="#" className="hover:text-[#fc8b0a] transition"><FaLinkedinIn /></a> */}
-          </div>
+          </div> */}
         </div>
 
         {/* Map */}

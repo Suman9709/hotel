@@ -56,7 +56,24 @@ const amenitiesData = {
             "https://res.cloudinary.com/dwvf9a857/image/upload/v1764527277/6321104812535562263_ehdnuw.jpg",
             "https://res.cloudinary.com/dwvf9a857/image/upload/v1764527279/WhatsApp_Image_2024-12-21_at_5.42.53_PM_kt1j6y.jpg",
         ]
-    }
+    },
+
+
+    "yoga": {
+        title: "Yoga 'Make you fell fresh'",
+        description: [
+           "Find balance and relaxation with guided yoga sessions designed for all experience levels."
+        ],
+        images: [
+            "https://res.cloudinary.com/dwvf9a857/image/upload/v1764532408/DSC_0319_zgi5q3.jpg",
+            "https://res.cloudinary.com/dwvf9a857/image/upload/v1764532400/DSC_0303_fvvbkn.jpg",
+            "https://res.cloudinary.com/dwvf9a857/image/upload/v1764532415/DSC_0333_bf0m2n.jpg",
+            "https://res.cloudinary.com/dwvf9a857/image/upload/v1764532415/DSC_0336_tdidxd.jpg",
+            "https://res.cloudinary.com/dwvf9a857/image/upload/v1764532417/DSC_0338_tuqs5d.jpg",
+        ]
+    },
+
+
 }
 
 const AnimitiesDetails = () => {
@@ -91,7 +108,7 @@ const AnimitiesDetails = () => {
 
     return (
         <div className='mt-24 px-6 sm:px-10 lg:px-16'>
-            
+
             <h1 className='text-xl sm:text-4xl font-bold text-center text-gray-800 mb-8'
                 style={{ fontFamily: "Times New Roman, serif" }}>
                 {amenity.title}
@@ -124,7 +141,7 @@ const AnimitiesDetails = () => {
                 >
                     <div className="relative max-w-4xl w-full px-6"
                         onClick={(e) => e.stopPropagation()}>
-                        
+
                         {/* Close Button */}
                         <button className="absolute top-4 right-4 text-white text-3xl"
                             onClick={() => setOpenIndex(null)}>
