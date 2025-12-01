@@ -172,10 +172,10 @@ const RoomsPage = () => {
                         li5={room.li5}
                         li6={room.li6}
                         extra={room.extra}
-                        price1={room.price1}
-                        price2={room.price2}
-                        price3={room.price3}
-                        price4={room.price4}
+                        // price1={room.price1}
+                        // price2={room.price2}
+                        // price3={room.price3}
+                        // price4={room.price4}
                     />
                 ))}
             </div>

@@ -106,7 +106,7 @@ const Footer = () => {
             <li className="flex items-center gap-2">
               <FaInstagram className="text-pink-600" />
               <a
-                href="https://www.instagram.com/3acresresort"
+                href="https://www.instagram.com/3acre.s/?igsh=MWppN3VrOWR0YXhxdg%3D%3D#"
                 target="_blank"
                 className="hover:text-pink-700"
               >

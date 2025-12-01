@@ -1,17 +1,16 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "/logo.png";
-// import logo from '/logo1.jpg'
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
+import BookingModel from "./BookingModel";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [isModelOpen, setIsModelOpen] = useState(false);
 
   const location = useLocation();
-  // const isHome = location.pathname === "/";
-
-  const transparentPage = ["/", "/rooms",];
+  const transparentPage = ["/", "/rooms"];
   const isTransparentPage = transparentPage.includes(location.pathname);
 
   useEffect(() => {
@@ -23,7 +22,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // const navbarbg = !isHome ? true : scrolled;
+  const openModel1 = () => setIsModelOpen(true);
+  const closeModel1 = () => setIsModelOpen(false);
 
   return (
     <nav
@@ -36,9 +36,7 @@ const Navbar = () => {
         }
   `}
     >
-
       <div className="w-full flex justify-between items-center px-4 md:px-10 h-20 mx-auto overflow-x-hidden">
-
         <div className="w-14 h-14 sm:w-20 sm:h-20 shrink-0 ">
           <img
             src={logo}
@@ -52,10 +50,8 @@ const Navbar = () => {
           className={`hidden md:flex gap-8 text-md font-medium 
             ${isTransparentPage ? (scrolled ? "text-gray-700" : "text-white") : "text-gray-700"}`}
         >
-
           <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
           <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">ROOMS</li></Link>
-          {/* <Link to={"/facilities"} id="facilities"><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link> */}
           <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">EVENTS</li></Link>
           <li
             className="cursor-pointer hover:text-[#fc8b0a]"
@@ -65,12 +61,13 @@ const Navbar = () => {
           >
             CONTACT
           </li>
-
         </ul>
 
+        {/* Desktop Book Now Button */}
         <button
-          className={`hidden md:block px-6 py-2 rounded-full font-semibold transition-all duration-500 cursor-pointer hover:text-[#fc8b0a] ${scrolled ? "bg-[#001526] text-white" : "bg-white text-[#001526]"
+          className={`hidden md:block px-6 py-2 rounded-full font-semibold transition-all duration-500 cursor-pointer hover:bg-[#fc8b0a] hover:text-white ${scrolled ? "bg-[#001526] text-white" : "bg-white text-[#001526]"
             }`}
+          onClick={openModel1}
         >
           Book Now
         </button>
@@ -96,7 +93,6 @@ const Navbar = () => {
         >
           <Link to={"/"}> <li className="cursor-pointer hover:text-[#fc8b0a]">HOME</li></Link>
           <Link to={"/rooms"} id="rooms"> <li className="cursor-pointer hover:text-[#fc8b0a]">ROOMS</li></Link>
-          {/* <Link to={"/facilities"}><li className="cursor-pointer hover:text-[#fc8b0a]">FACILITIES</li></Link> */}
           <Link to={"/events"}> <li className="cursor-pointer hover:text-[#fc8b0a]">EVENTS</li></Link>
           <li
             className="cursor-pointer hover:text-[#fc8b0a]"
@@ -107,13 +103,16 @@ const Navbar = () => {
             CONTACT
           </li>
           <button
-            className={`px-6 py-2 rounded-full font-semibold mx-auto mt-2 w-40 cursor-pointer ${scrolled ? "bg-[#001526] text-white" : "bg-white text-[#001526]"
+            className={`px-6 py-2 rounded-full font-semibold mx-auto mt-2 w-40 cursor-pointer hover:bg-[#fc8b0a] hover:text-white ${scrolled ? "bg-[#001526] text-white" : "bg-white text-[#001526]"
               }`}
+            onClick={openModel1}
           >
             Book Now
           </button>
         </ul>
       </div>
+
+      <BookingModel isOpen={isModelOpen} onClose={closeModel1} />
     </nav>
   );
 };

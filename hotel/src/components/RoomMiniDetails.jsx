@@ -159,11 +159,12 @@
 
 
 
-import React from 'react'
+import React, { useState } from 'react'
 import spacelogo from '/arealogo.png'
 import bedlogo from '/bedlogo.png'
 import extralogo from '/bathroomlogo.png'
 import { Link } from 'react-router-dom'
+import BookingModel from './BookingModel'
 
 const RoomMiniDetails = ({ keyName,
     img, roomType, space, bed, GardenView,
@@ -171,6 +172,11 @@ const RoomMiniDetails = ({ keyName,
     li1, li2, li3, li4, li5, li6
 }) => {
 
+
+    const [isModelOpen, setIsModelOpen] = useState(false);
+
+    const openModel =()=> setIsModelOpen(true);
+    const closeModel =()=> setIsModelOpen(false);
     return (
         <div className="w-full border rounded-2xl shadow-md bg-white 
                         p-3 sm:p-4 md:p-6 
@@ -245,7 +251,7 @@ const RoomMiniDetails = ({ keyName,
                 {/* Meal Information */}
                 <div className="border rounded-xl bg-gray-50 p-4">
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">Available Meal Options</h3>
-                    
+
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {/* Breakfast */}
                         {breakfast && (
@@ -293,7 +299,8 @@ const RoomMiniDetails = ({ keyName,
 
                 {/* Single Book Button */}
                 <div className="border rounded-xl bg-gray-50 p-6 text-center">
-                    <button className="bg-[#fc8b0a] text-white py-4 px-12 rounded-lg text-xl font-semibold hover:bg-[#e07a05] transition-colors w-full max-w-md mx-auto">
+                    <button className="bg-[#fc8b0a] text-white py-4 px-12 rounded-lg text-xl font-semibold hover:bg-[#e07a05] transition-colors w-full max-w-md mx-auto"
+                        onClick={openModel}>
                         Book Now
                     </button>
                     <p className="text-gray-600 text-sm mt-3">
@@ -302,6 +309,7 @@ const RoomMiniDetails = ({ keyName,
                 </div>
 
             </div>
+            <BookingModel isOpen={isModelOpen} onClose={closeModel} />
         </div>
     );
 }
