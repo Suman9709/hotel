@@ -7,6 +7,7 @@ import Aminities from './Aminities'
 import Interior from './Interior'
 import EnquireForm from './EnquireForm'
 import contactImg from '/contact.jpg'
+import ReviewPage from './ReviewPage'
 
 
 const HomePage = () => {
@@ -30,7 +31,7 @@ const HomePage = () => {
             <section id='interior'>
                 <Interior />
             </section>
-            <section
+            {/* <section
                 id='enquire'
                 className="relative min-h-screen"
                 style={{
@@ -40,12 +41,13 @@ const HomePage = () => {
                     backgroundAttachment: 'fixed'
                 }}
             >
-               
-
-                {/* Form Content */}
                 <div className="relative z-10">
                     <EnquireForm />
                 </div>
+            </section> */}
+
+            <section>
+                <ReviewPage/>
             </section>
         </div>
     )
